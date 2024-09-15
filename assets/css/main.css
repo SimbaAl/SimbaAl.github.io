@@ -2236,6 +2236,28 @@ input, select, textarea {
 			.button.primary:hover {
 				background-color: #18bfef;
 			}
+/* Make the full-width posts span the entire container */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2rem;
+}
+
+.posts .post {
+    width: calc(50% - 4rem);
+    margin: 2rem;
+}
+
+.posts .post.full-width {
+    width: calc(100% - 4rem);
+}
+
+@media screen and (max-width: 980px) {
+    .posts .post,
+    .posts .post.full-width {
+        width: calc(100% - 4rem);
+    }
+}
 
 /* Form */
 
